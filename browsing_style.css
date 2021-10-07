@@ -1,7 +1,8 @@
 /* general text style settings */
-body{
+body {
     font-family: 'Encode Sans Condensed';
     background-color:#FFFDE3;
+    margin: 0px;
 }
 
 .header {
@@ -10,22 +11,23 @@ body{
     grid-template-columns: 50% 50%;
     background: #F8AEB9;
     color: white;
+    /* position: relative; */
+    margin: 0px;
+}
+
+.wrapper {
+    position: absolute;
+    right: 0px;
+    margin: 20px;
 }
 
 .nav {
     font-size: 20px;
     display: inline-flex;
     list-style-type: none;
-    position: absolute;
-    top: 50%;
-    left: 90%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: 'relative';
+    right: 0px;
     
-}
-
-.nav.div:hover {
-    color: #B88750;
 }
 
 .nav > div { /* space between nav items*/
