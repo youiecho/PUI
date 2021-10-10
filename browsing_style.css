@@ -1,17 +1,17 @@
-/* general text style settings */
-body {
+body { /*general style*/
     font-family: 'Encode Sans Condensed';
     background-color:#FFFDE3;
     margin: 0px;
+    letter-spacing: 0.8px;
+    padding-bottom: 100px;
 }
 
-.header {
-    height: 80px;
+.header { /*whole header section*/
     display: grid;
     grid-template-columns: 50% 50%;
     background: #F8AEB9;
     color: white;
-    /* position: relative; */
+    height: 80px;
     margin: 0px;
 }
 
@@ -63,11 +63,17 @@ a { /*remove hyperlink style*/
     height: 50px;
     display: table-cell;
     padding-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-a {
-    vertical-align: middle;
+.itemDetails {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 8px;
 }
+
+/*  */
 
 .itemInfoContainer {
     color: white;
@@ -118,10 +124,10 @@ img {
     font-family: 'Encode Sans Condensed'
     }
 
-    h1 { /*shop logo*/
-        font-size: 22pt;
-        font-weight: 800;
-        text-transform: uppercase;
-        margin-left: 30px;
-    }
+h1 { /*shop name/logo*/
+    font-size: 22pt;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
 

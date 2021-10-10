@@ -1,15 +1,21 @@
-body{
+body { /*general style*/
     font-family: 'Encode Sans Condensed';
     background-color:#FFFDE3;
     margin: 0px;
+    letter-spacing: 0.8px;
 }
 
-.header {
-    height: 80px;
+a { /*remove hyperlink style*/
+    color: white;
+    text-decoration: inherit;
+}
+
+.header { /*whole header section*/
     display: grid;
     grid-template-columns: 50% 50%;
     background: #F8AEB9;
     color: white;
+    height: 80px;
     margin: 0px;
 }
 .whole {
@@ -33,17 +39,15 @@ body{
     margin: 6px;
 }
 
-a { /*remove hyperlink style*/
-    color: white;
-    text-decoration: inherit;
-}
 
 .maingrid {
+    
     color: white;
     display: grid;
     background: #FFFDE3;
     grid-template-columns: 50% 50%;
     margin: auto;
+    margin-top: 30px;
     width: 1300px;
 }
 
@@ -71,12 +75,14 @@ a { /*remove hyperlink style*/
 
 .caramelPecanDetails {
     font-size: 20px;
-    font-weight: 100px;
+    font-weight: normal;
+    padding-left: 10px;
+
 }
 
 .description {
     color: #715E4A;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .descriptionContainer {
@@ -106,7 +112,6 @@ a { /*remove hyperlink style*/
     text-align: center;
     font-size: 18px;
     font-weight: 400px;
-    padding-top: 30px;
     border-radius: 10px;
     margin-left: 35px;
     width: 450px;
@@ -120,7 +125,7 @@ a { /*remove hyperlink style*/
     color: #715E41;
     font-size: 24px;
     margin-left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .options > div {
@@ -142,7 +147,8 @@ img {
     background-color: #FFFDE3;
     border: 3px solid #b88750;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     }
   
   /* .button:hover {
@@ -168,24 +174,31 @@ li {
     padding: 10px;
     position: absolute;
 }
-h1 { /*shop logo*/
+
+h1 { /*shop name/logo*/
     font-size: 22pt;
-    font-weight: 800;
+    font-weight: bolder;
     text-transform: uppercase;
     margin-left: 30px;
-    padding-bottom: 10px;   
 }
 
 h2 { /*options*/
     color:#715E4A;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 h3 { 
     color: #715E4A;
     font-size: 20px;
     font-weight: normal;
-    margin: 30px;
+}
+
+h6 { 
+    color: #715E4A;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 30px;
 }
 
 h4 {
@@ -193,6 +206,7 @@ h4 {
     color: #715E4A;
     font-size: 20px;
     margin: 30px;
+    margin-bottom: 80px;
 }
 
 h5 { 
@@ -214,6 +228,19 @@ h5 {
     border-radius: 10px;
 }
 
+.button3 {
+    font-family: 'Encode Sans Condensed';
+    margin: 0px;
+    width: 160px;
+    height: 50px;
+    background-color: white;
+    color: #715E4A;
+    font-size: 20px;
+    font-weight: normal;
+    border: 3px solid rgba(184, 135, 80, 0.5);
+    border-radius: 10px;
+}
+
 hr {
     border: none;
     background-color: #b88750;
@@ -224,6 +251,7 @@ hr {
 
 .likes {
     color: #F8AEB9;
+    padding-left: 10px; 
 }
 .number {
     font-weight: normal;
