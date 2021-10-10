@@ -1,0 +1,97 @@
+body {
+    font-family: 'Encode Sans Condensed';
+    background-color:#FFFDE3;
+    margin: 0px;
+}
+a { /*remove hyperlink style*/
+    color: white;
+    text-decoration: inherit;
+}
+
+.header {
+    height: 80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #F8AEB9;
+    color: white;
+    /* position: relative; */
+    margin: 0px;
+}
+
+.wrapper {
+    position: absolute;
+    right: 0px;
+    margin: 20px;
+}
+
+.nav {
+    font-size: 20px;
+    display: inline-flex;
+    list-style-type: none;
+    position: 'relative';
+    right: 0px;
+    
+}
+
+.nav > div { /* space between nav items*/
+    margin: 6px;
+}
+
+.intro {
+    color: #715E41;
+    font-size: 
+    height: 200px;
+    width: 750px;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+
+.mainGrid {
+    color: #715E41;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    height: 500px;
+}
+
+.bestRolls { /*best rolls*/
+    background-image: url(mainimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 500px;
+    text-align: right;
+    padding-top: 200px;
+    width: 650;
+}
+
+.explore { /* link to browsing page*/
+    text-align: center;
+    color: white;
+    background: #B88750;
+    height: 500px;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 24px;
+  }
+
+h1 { /*shop logo text*/
+    font-size: 22pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+h2 { /*intro text*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h3 { /*best rolls text*/
+    margin-right: 30px;
+    margin-left: 350px;
+    font-size: 60px;
+    font-weight: 300;
+    font-family: 'IM Fell French Canon';
+ }
