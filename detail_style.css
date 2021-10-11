@@ -3,6 +3,7 @@ body { /*general style*/
     background-color:#FFFDE3;
     margin: 0px;
     letter-spacing: 0.8px;
+    padding-bottom: 100px;
 }
 
 a { /*remove hyperlink style*/
