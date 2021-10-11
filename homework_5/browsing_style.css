@@ -1,0 +1,133 @@
+body { /*general style*/
+    font-family: 'Encode Sans Condensed';
+    background-color:#FFFDE3;
+    margin: 0px;
+    letter-spacing: 0.8px;
+    padding-bottom: 100px;
+}
+
+a { /*remove hyperlink style*/
+    color: white;
+    text-decoration: inherit;
+}
+
+.header { /*whole header section*/
+    display: grid;
+    grid-template-columns: 50% 50%; /* 2 columns */
+    background: #F8AEB9;
+    color: white;
+    height: 80px;
+    margin: 0px;
+}
+
+.wrapper { /*right side nav bar*/
+    position: absolute;
+    right: 0px;
+    margin: 20px;
+}
+
+.nav { /*right side nav bar elements*/
+    font-size: 20px;
+    display: inline-flex;
+    right: 0px;
+    
+}
+
+.nav > div { /*set spacing among nav items*/
+    margin: 6px;
+}
+
+/*styling elements below header*/
+
+.pageName { /*page name*/
+    height: 80px;
+}
+
+.itemNameContainer { /* 3-column grid with item headers */
+    color: white;
+    display: grid;
+    grid-template-columns: 33% 33% 33%; /*3 columns*/
+    text-align: left;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 1300px;
+    
+}
+
+.ItemName { /* wrapper for each item name*/
+    background:#B88750;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    display: table-cell;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.itemDetails { /* price and calories within item header*/
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 8px;
+}
+
+.itemInfoContainer { /* 3-column grid wth item info */
+    color: white;
+    display: grid;
+    grid-template-columns: 33% 33% 33%; /*3 columns*/
+    text-align: center;
+    margin: auto;
+    width: 1300px;
+}
+
+.itemInfo { /*wrapper for each item info*/
+    display: grid;
+    color: #68575a;
+    grid-template-columns: 50% 50%; /*2 columns*/
+    text-align: center;
+    width: 400px;
+    height: 200px;
+}
+
+.button { /* "Select" buttons*/
+    height: 40px;
+    width: 160px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: normal;
+    color: #715E4A;
+    background-color: white;
+    border: 3px solid #b88750;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 80px;
+    font-family: 'Encode Sans Condensed'
+}
+
+p { /* p texts */
+    margin: 10px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/*heading styles*/
+h1 { /*shop name/logo*/
+    font-size: 22pt;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 80px;
+    color: #715E41;
+    font-size: 25px;
+}
