@@ -29,7 +29,6 @@ a { /*remove hyperlink style*/
 .nav { /*right side nav bar elements*/
     font-size: 20px;
     display: inline-flex;
-    position: 'relative';
     right: 0px;
     
 }
