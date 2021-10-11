@@ -12,92 +12,89 @@ a { /*remove hyperlink style*/
 
 .header { /*whole header section*/
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%; /* 2 columns */
     background: #F8AEB9;
     color: white;
     height: 80px;
     margin: 0px;
 }
-.whole {
-    /* display: flex; */
-}
-.wrapper {
+
+.wrapper { /*right side nav bar*/
     position: absolute;
     right: 0px;
     margin: 20px;
 }
 
-.nav {
+.nav { /*right side nav bar elements*/
     font-size: 20px;
     display: inline-flex;
-    list-style-type: none;
     position: 'relative';
     right: 0px; 
 }
 
-.nav > div { /* space between nav items*/
+.nav > div { /*set spacing among nav items*/
     margin: 6px;
 }
 
+/*styling elements below header*/
 
 .maingrid {
     
     color: white;
     display: grid;
     background: #FFFDE3;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%; /* 2 columns */
     margin: auto;
     margin-top: 30px;
     width: 1300px;
 }
 
-.itemHeader {
+.leftColumn {
+    margin-right: 10px;
+}
+
+
+.caramelPecan > p, span { /* space between p, span items*/
+    margin-right: 22px;
+}
+
+.caramelPecan { /* caramel pecan header elements */
     background: #B88750;
     color: white;
     border-radius: 10px;
     height: 80px;
-}
-
-.firstGrid {
-    margin-right: 50px;
-}
-
-.caramelPecan {
     font-size: 40px;
     font-weight: 600;
     padding-top: 15px;
     padding-left: 20px;
+    margin-bottom: 0px;
 }
 
-.itemHeader > p, span { /* space between p, span items*/
-    margin-right: 22px;
-}
-
-.caramelPecanDetails {
+.caramelPecanDetails { /* price and calories */
     font-size: 20px;
     font-weight: normal;
     padding-left: 10px;
-
 }
 
-.description {
-    color: #715E4A;
-    margin-top: 18px;
+.likes { /* heart icon and number of likes */
+    color: #F8AEB9;
+    padding-left: 10px; 
 }
 
-.descriptionContainer {
+.descriptionContainer { /* caramel pecan information */
     width: 600px;
     margin: auto;
 }
 
-.firstGrid {
-    margin-right: 10px;
+.description { /* description text */
+    color: #715E4A;
+    margin-top: 18px;
 }
-
-.optionsContainer {
+ 
+.optionsContainer { /* right column for purchase options */
     /* border: 3px solid #b88750; */
     border-radius: 10px;
-    height: 600px;
+    height: 615px;
     margin-top: 40px;
     margin-left: 10px;
     border: 3px solid #B88750;  
@@ -105,10 +102,22 @@ a { /*remove hyperlink style*/
     align-items: center;
 }
 
-.optionItems{
+.options { /* column title */
+    margin-top: 30px;
+    color: #715E41;
+    font-size: 24px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.options > div { /* space among option items */
+    margin: 16px;
+}
+
+.optionItems{ /* number of rolls, glazing, total cost, cart, checkout */
     color: #715E4A;
     display: grid;
-    grid-template-columns: 50% 50%; 
+    grid-template-columns: 50% 50%; /* 2 columns */
     text-align: center;
     font-size: 18px;
     font-weight: 400px;
@@ -116,32 +125,25 @@ a { /*remove hyperlink style*/
     margin-left: 35px;
     width: 450px;
     margin: auto;
-    /* margin-top: 120px; */
 }
 
-.options {
-    margin-top: 30px;
-    /* text-align: center; */
-    color: #715E41;
-    font-size: 24px;
-    margin-left: 30px;
-    margin-bottom: 50px;
+.number { /* number of rolls */
+    font-weight: bold;
+    color: #715E4A;
+    padding: 20px;
+    margin: 0px;
 }
 
-.options > div {
-    margin: 16px;
-}
-img {
+img { /* item image */
     border-radius: 10px;
     width: 640px;
-    margin-top: 10px;
 }
-  
-  .button {
-    font-family: 'Encode Sans Condensed'
-    width: 100px;
-    height: 30px;
-    font-size: 11px;
+
+/* buttons */
+.button { /* buttons for further caramel pecan info */
+    width: 110px;
+    height: 40px;
+    font-size: 14px;
     font-weight: 500;
     color: #715E4A;
     background-color: #FFFDE3;
@@ -149,32 +151,52 @@ img {
     border-radius: 10px;
     margin-top: 16px;
     margin-bottom: 16px;
-    }
-  
-  /* .button:hover {
-    background-color: white;
-    box-shadow: 0px 15px 20px white;
-    color: #fff;
-    transform: translateY(-7px);
-  } */
+    font-family: 'Encode Sans Condensed'
+}
 
 
-li {
-    list-style-type: none;
-    width: 190px; 
+.button2 {
+    margin: 0px;
+    width: 160px;
     height: 40px;
-    margin: 5px;
-}
-
-.no {
+    background-color: white;
+    color: #715E4A;
+    font-size: 18px;
+    font-weight: normal;
     border: 3px solid #b88750;
-    width: 100px;
-    height: 30px;
-    margin: auto;
-    padding: 10px;
-    position: absolute;
+    border-radius: 10px;
+    font-family: 'Encode Sans Condensed'
 }
 
+.button3 {
+    margin: 0px;
+    width: 160px;
+    height: 40px;
+    background-color: white;
+    color: #715E4A;
+    font-size: 18px;
+    font-weight: normal;
+    border: 3px solid rgba(184, 135, 80, 0.5);
+    border-radius: 10px;
+    font-family: 'Encode Sans Condensed'
+}
+
+i.fas.fa-caret-down { /* dropdown */
+    align-items: end;
+    padding-left: 50px;
+    position: absolute; 
+}
+
+hr { /* horizontal line to separate total price */
+    border: none;
+    background-color: #b88750;
+    color: #ccc;
+    height: 0.5px;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+/* heading styles */
 h1 { /*shop name/logo*/
     font-size: 22pt;
     font-weight: bolder;
@@ -182,86 +204,36 @@ h1 { /*shop name/logo*/
     margin-left: 30px;
 }
 
-h2 { /*options*/
+h2 { /* options title */
     color:#715E4A;
     font-size: 25px;
 }
 
-h3 { 
+h3 { /* option items */
     color: #715E4A;
     font-size: 20px;
     font-weight: normal;
 }
 
-h6 { 
+h4 { /* total price */
     color: #715E4A;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
-h4 {
-    font-weight: bold;
-    color: #715E4A;
-    font-size: 20px;
-    margin: 30px;
-    margin-bottom: 80px;
-}
-
-h5 { 
-    font-weight: bold;
+h5 { /* +, - for number of rolls */
     color: #B88750;
+    font-weight: bold;
     font-size: 20px;
     margin: 30px;
 }
-.button2 {
-    font-family: 'Encode Sans Condensed';
-    margin: 0px;
-    width: 160px;
-    height: 50px;
-    background-color: white;
+
+h6 {  /* dropdown */
     color: #715E4A;
     font-size: 20px;
-    font-weight: normal;
-    border: 3px solid #b88750;
-    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 13px;
 }
 
-.button3 {
-    font-family: 'Encode Sans Condensed';
-    margin: 0px;
-    width: 160px;
-    height: 50px;
-    background-color: white;
-    color: #715E4A;
-    font-size: 20px;
-    font-weight: normal;
-    border: 3px solid rgba(184, 135, 80, 0.5);
-    border-radius: 10px;
-}
 
-hr {
-    border: none;
-    background-color: #b88750;
-    color: #ccc;
-    height: 0.5px;
-    width: 500px;
-}
-
-.likes {
-    color: #F8AEB9;
-    padding-left: 10px; 
-}
-.number {
-    font-weight: normal;
-    color: #715E4A;
-    padding: 20px;
-    margin: 0px;
-}
-
-i.fas.fa-caret-down {
-    align-items: end;
-    padding-left: 50px;
-    position: absolute; 
-}
