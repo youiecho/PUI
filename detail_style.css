@@ -198,11 +198,18 @@ hr { /* horizontal line to separate total price */
 
 #glazing {
     border: none;
-    
     font-size: 18px;
     font-weight: normal;
     font-family: 'Encode Sans Condensed'
 
+}
+
+#minus, #plus {
+  margin: 0px;
+}
+
+#cartItemsNumber {
+  color: white;
 }
 
 /* heading styles */

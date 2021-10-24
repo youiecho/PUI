@@ -42,7 +42,7 @@ a { /*remove hyperlink style*/
     /* border: 3px solid #b88750; */
     border-radius: 10px;
     height: 615px;
-    width: 1450px;
+    width: 1200px;
     margin: auto;
     margin-top: 60px;
     border: 3px solid #B88750;  
@@ -57,7 +57,7 @@ a { /*remove hyperlink style*/
 .mainGrid {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 60px;
+    margin: 20px;
     margin-top: 0px;
 }
 
@@ -67,13 +67,13 @@ a { /*remove hyperlink style*/
 
 .innerGrid {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 60%;
 }
 
 img { /* item image */
     border-radius: 10px;
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
 }
 
 /* buttons */
@@ -106,7 +106,7 @@ img { /* item image */
 .button3 {
     width: 180px;
     height: 40px;
-    margin-top: 60px;
+    margin-top: 160px;
     background-color: white;
     color: #715E4A;
     font-size: 18px;
@@ -118,8 +118,8 @@ img { /* item image */
 
 .buttons {
     display: grid;
-    grid-template-columns: 25% 25%;
-    margin-top: 50px;
+    grid-template-columns: 30% 30%;
+    margin-top: 20px;
 }
 
 .checkoutContainer {

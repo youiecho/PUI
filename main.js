@@ -34,20 +34,27 @@
   function updateRollNumber(opType) {
     var rollNumber = localStorage.getItem("rollNumber");
     rollNumber = parseInt(rollNumber);
-  
+
     if (opType === "plus") {
-      rollNumber += 3;
+      if (rollNumber === 1) {
+          rollNumber += 2;
+      } else {
+      rollNumber *= 2;
+      }
     } else {
-      rollNumber -= 3;
+        if (rollNumber === 3) {
+            rollNumber -= 2;
+        } else {
+        rollNumber /= 2;
+        }
     }
-  
+
     if (rollNumber > 12) {
       rollNumber = 12;
     }
-    if (rollNumber < 0) {
-      rollNumber = 0;
+    if (rollNumber < 1) {
+        rollNumber = 1;
     }
-  
     localStorage.setItem("rollNumber", rollNumber);
     updateRollNumberUI(rollNumber);
   }
@@ -186,7 +193,7 @@
   
     // have not been initialized in storage
     if (!rollNum) {
-      localStorage.setItem("rollNumber", 0);
+      localStorage.setItem("rollNumber", 1);
     }
   
     var rollNumElem = document.getElementById("rollNumber");
@@ -220,7 +227,7 @@
   
     var cartElem = document.getElementById("cartContainer");
     if (cartElem !== null) {
-      displayCartProducts();
+      displayCartProducts(); //function to display cart products later, when I make cart interactive
     }
   }
   
