@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <!--links to stylesheet, typefaces, icons-->
+
+<head>
+    <!--links to stylesheet, typefaces, icons-->
     <link href="browsing_style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fa243ee63d.js" crossorigin="anonymous"></script>
@@ -8,15 +10,21 @@
 </head>
 
 <body>
-    <div class="header"> <!--whole header section-->
-        <a href="./index.html"><h1>Bun Bun Bake Shop</h1></a> <!--shop name/logo-->
-        <div class="wrapper"> <!--right side nav bar-->
-            <div class="nav"> <!--right side nav bar elements-->
+    <div class="header">
+        <!--whole header section-->
+        <a href="./index.html">
+            <h1>Bun Bun Bake Shop</h1>
+        </a>
+        <!--shop name/logo-->
+        <div class="wrapper">
+            <!--right side nav bar-->
+            <div class="nav">
+                <!--right side nav bar elements-->
                 <div>About Us</div>
                 <div>Help</div>
                 <div><i class="fas fa-search"></i></div>
                 <!--user icon links to My Page-->
-                <div><a href="./my.html"><i class="fas fa-user"></i></a></div> 
+                <div><a href="./my.html"><i class="fas fa-user"></i></a></div>
                 <div><i class="fas fa-heart"></i></div>
                 <div>
                     <a href="./cart.html">
@@ -28,12 +36,17 @@
         </div>
     </div>
 
-    <div class="pageName"><h2>Menu</h2></div> <!--page name-->
+    <div class="pageName">
+        <h2>Menu</h2>
+    </div>
+    <!--page name-->
 
-    <div class="itemNameContainer"> <!-- 3-column grid, first row of item headers -->
-        <div class="ItemName"> <!-- wrapper for each item name -->
+    <div class="itemNameContainer">
+        <!-- 3-column grid, first row of item headers -->
+        <div class="ItemName">
+            <!-- wrapper for each item name -->
             <!-- includes item name, price, and calories -->
-            <p>Original <span class="itemDetails"> $4.50 500kcal</span></p> 
+            <p>Original <span class="itemDetails"> $4.50 500kcal</span></p>
         </div>
         <div class="ItemName">
             <p>Caramel Pecan <span class="itemDetails"> $4.50 700kcal </span></p>
@@ -43,13 +56,15 @@
         </div>
     </div>
 
-    <div class="itemInfoContainer"> <!-- 3-column grid, first row of item info -->
-        <div class="itemInfo"> <!-- wrapper for each item info -->
+    <div class="itemInfoContainer">
+        <!-- 3-column grid, first row of item info -->
+        <div class="itemInfo">
+            <!-- wrapper for each item info -->
             <img src="images/browsingimg.png" alt="original bun image"> <!-- item image and alt tag -->
-            <div> 
+            <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
                 <a href="./detail.html">
-                <button class="button" id='Original' onclick="setBunType(this.id)">Select</button>
+                    <button class="button" id='Original' onclick="setBunType(this.id)">Select</button>
                 </a>
             </div>
         </div>
@@ -73,8 +88,10 @@
         </div>
     </div>
 
-    <div class="itemNameContainer"> <!-- 3-column grid, second row of item headers -->
-        <div class="ItemName"><!-- wrapper for each item name -->
+    <div class="itemNameContainer">
+        <!-- 3-column grid, second row of item headers -->
+        <div class="ItemName">
+            <!-- wrapper for each item name -->
             <p>Original Gluten-Free <span class="itemDetails"> $4.50 500kcal</p>
         </div>
         <div class="ItemName">
@@ -85,8 +102,10 @@
         </div>
     </div>
 
-    <div class="itemInfoContainer"> <!-- 3-column grid, first row of item info -->
-        <div class="itemInfo"> <!-- wrapper for each item info -->
+    <div class="itemInfoContainer">
+        <!-- 3-column grid, first row of item info -->
+        <div class="itemInfo">
+            <!-- wrapper for each item info -->
             <img src="images/browsingimg.png" alt="original gluten-free bun image">
             <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
@@ -116,5 +135,5 @@
     </div>
     <script src="main.js"></script>
 </body>
-</html>
 
+</html>

@@ -1,52 +1,60 @@
-body { /*general style*/
-    font-family: 'Encode Sans Condensed';
-    background-color:#FFFDE3;
-    margin: 0px;
-    letter-spacing: 0.8px;
-    padding-bottom: 100px;
+body {
+    /*general style*/
+    font-family     : 'Encode Sans Condensed';
+    background-color: #FFFDE3;
+    margin          : 0px;
+    letter-spacing  : 0.8px;
+    padding-bottom  : 100px;
 }
 
-a { /*remove hyperlink style*/
-    color: white;
+a {
+    /*remove hyperlink style*/
+    color          : white;
     text-decoration: inherit;
 }
 
-.header { /*whole header section*/
-    display: grid;
-    grid-template-columns: 50% 50%; /* 2 columns */
-    background: #F8AEB9;
-    color: white;
-    height: 80px;
-    margin: 0px;
+.header {
+    /*whole header section*/
+    display              : grid;
+    grid-template-columns: 50% 50%;
+    /* 2 columns */
+    background           : #F8AEB9;
+    color                : white;
+    height               : 80px;
+    margin               : 0px;
 }
 
-.wrapper { /*right side nav bar*/
+.wrapper {
+    /*right side nav bar*/
     position: absolute;
-    right: 0px;
-    margin: 20px;
+    right   : 0px;
+    margin  : 20px;
 }
 
-.nav { /*right side nav bar elements*/
+.nav {
+    /*right side nav bar elements*/
     font-size: 20px;
-    display: inline-flex;
-    right: 0px; 
+    display  : inline-flex;
+    right    : 0px;
 }
 
-.nav > div { /*set spacing among nav items*/
+.nav>div {
+    /*set spacing among nav items*/
     margin: 6px;
 }
 
 /*styling elements below header*/
 
 .maingrid {
-    
-    color: white;
-    display: grid;
-    background: #FFFDE3;
-    grid-template-columns: 50% 50%; /* 2 columns */
-    margin: auto;
-    margin-top: 30px;
-    width: 1300px;
+
+    color                : white;
+    display              : grid;
+    background           : #FFFDE3;
+    grid-template-columns: 50% 50%;
+    /* 2 columns */
+    margin               : auto;
+    margin-top           : 30px;
+    width                : 1300px;
 }
 
 .leftColumn {
@@ -54,211 +62,236 @@ a { /*remove hyperlink style*/
 }
 
 
-.caramelPecan > p, span { /* space between p, span items*/
+.caramelPecan>p,
+span {
+    /* space between p, span items*/
     margin-right: 22px;
 }
 
-.caramelPecan { /* caramel pecan header elements */
-    background: #B88750;
-    color: white;
+.caramelPecan {
+    /* caramel pecan header elements */
+    background   : #B88750;
+    color        : white;
     border-radius: 10px;
-    height: 80px;
-    font-size: 40px;
-    font-weight: 600;
-    padding-top: 15px;
-    padding-left: 20px;
+    height       : 80px;
+    font-size    : 40px;
+    font-weight  : 600;
+    padding-top  : 15px;
+    padding-left : 20px;
     margin-bottom: 0px;
 }
 
-.caramelPecanDetails { /* price and calories */
-    font-size: 20px;
-    font-weight: normal;
+.caramelPecanDetails {
+    /* price and calories */
+    font-size   : 20px;
+    font-weight : normal;
     padding-left: 10px;
 }
 
-.likes { /* heart icon and number of likes */
-    color: #F8AEB9;
-    padding-left: 10px; 
+.likes {
+    /* heart icon and number of likes */
+    color       : #F8AEB9;
+    padding-left: 10px;
 }
 
-.descriptionContainer { /* caramel pecan information */
-    width: 600px;
+.descriptionContainer {
+    /* caramel pecan information */
+    width : 600px;
     margin: auto;
 }
 
-.description { /* description text */
-    color: #715E4A;
+.description {
+    /* description text */
+    color     : #715E4A;
     margin-top: 18px;
 }
- 
-.optionsContainer { /* right column for purchase options */
+
+.optionsContainer {
+    /* right column for purchase options */
     /* border: 3px solid #b88750; */
-    border-radius: 10px;
-    height: 615px;
-    margin-top: 40px;
-    margin-left: 10px;
-    border: 3px solid #B88750;  
+    border-radius   : 10px;
+    height          : 615px;
+    margin-top      : 40px;
+    margin-left     : 10px;
+    border          : 3px solid #B88750;
     background-color: white;
-    align-items: center;
+    align-items     : center;
 }
 
-.options { /* column title */
-    margin-top: 30px;
-    color: #715E41;
-    font-size: 24px;
-    margin-left: 30px;
+.options {
+    /* column title */
+    margin-top   : 30px;
+    color        : #715E41;
+    font-size    : 24px;
+    margin-left  : 30px;
     margin-bottom: 50px;
 }
 
-.options > div { /* space among option items */
+.options>div {
+    /* space among option items */
     margin: 16px;
 }
 
-.optionItems{ /* number of rolls, glazing, total cost, cart, checkout */
-    color: #715E4A;
-    display: grid;
-    grid-template-columns: 50% 50%; /* 2 columns */
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400px;
-    border-radius: 10px;
-    margin-left: 35px;
-    width: 450px;
-    margin: auto;
+.optionItems {
+    /* number of rolls, glazing, total cost, cart, checkout */
+    color                : #715E4A;
+    display              : grid;
+    grid-template-columns: 50% 50%;
+    /* 2 columns */
+    text-align           : center;
+    font-size            : 18px;
+    font-weight          : 400px;
+    border-radius        : 10px;
+    margin-left          : 35px;
+    width                : 450px;
+    margin               : auto;
 }
 
-.number { /* number of rolls */
+.number {
+    /* number of rolls */
     font-weight: bold;
-    color: #715E4A;
-    padding: 20px;
-    margin: 0px;
+    color      : #715E4A;
+    padding    : 20px;
+    margin     : 0px;
 }
 
-img { /* item image */
+img {
+    /* item image */
     border-radius: 10px;
-    width: 640px;
+    width        : 640px;
 }
 
 /* buttons */
-.button { /* buttons for further caramel pecan info */
-    width: 110px;
-    height: 40px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #715E4A;
+.button {
+    /* buttons for further caramel pecan info */
+    width           : 110px;
+    height          : 40px;
+    font-size       : 14px;
+    font-weight     : 500;
+    color           : #715E4A;
     background-color: #FFFDE3;
-    border: 3px solid #b88750;
-    border-radius: 10px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-family: 'Encode Sans Condensed'
+    border          : 3px solid #b88750;
+    border-radius   : 10px;
+    margin-top      : 16px;
+    margin-bottom   : 16px;
+    font-family     : 'Encode Sans Condensed'
 }
 
 
 .button2 {
-    margin: 0px;
-    width: 160px;
-    height: 40px;
+    margin          : 0px;
+    width           : 160px;
+    height          : 40px;
     background-color: white;
-    color: #715E4A;
-    font-size: 18px;
-    font-weight: normal;
-    border: 3px solid #b88750;
-    border-radius: 10px;
-    font-family: 'Encode Sans Condensed'
+    color           : #715E4A;
+    font-size       : 18px;
+    font-weight     : normal;
+    border          : 3px solid #b88750;
+    border-radius   : 10px;
+    font-family     : 'Encode Sans Condensed'
 }
 
 .button3 {
-    margin: 0px;
-    width: 160px;
-    height: 40px;
+    margin          : 0px;
+    width           : 160px;
+    height          : 40px;
     background-color: white;
-    color: #715E4A;
-    font-size: 18px;
-    font-weight: normal;
-    border: 3px solid rgba(184, 135, 80, 0.5);
-    border-radius: 10px;
-    font-family: 'Encode Sans Condensed'
+    color           : #715E4A;
+    font-size       : 18px;
+    font-weight     : normal;
+    border          : 3px solid rgba(184, 135, 80, 0.5);
+    border-radius   : 10px;
+    font-family     : 'Encode Sans Condensed'
 }
 
-i.fas.fa-caret-down { /* dropdown */
-    align-items: end;
+i.fas.fa-caret-down {
+    /* dropdown */
+    align-items : end;
     padding-left: 50px;
-    position: absolute; 
+    position    : absolute;
 }
 
-hr { /* horizontal line to separate total price */
-    border: none;
+hr {
+    /* horizontal line to separate total price */
+    border          : none;
     background-color: #b88750;
-    color: #ccc;
-    height: 0.5px;
-    width: 500px;
-    margin-bottom: 30px;
+    color           : #ccc;
+    height          : 0.5px;
+    width           : 500px;
+    margin-bottom   : 30px;
 }
 
 #glazing {
-    border: none;
-    font-size: 18px;
+    border     : none;
+    font-size  : 18px;
     font-weight: normal;
     font-family: 'Encode Sans Condensed'
 
 }
 
-#minus, #plus {
-  margin: 0px;
+#minus,
+#plus {
+    margin: 0px;
 }
 
 #cartItemsNumber {
-  color: white;
+    color: white;
 }
 
 /* heading styles */
-h1 { /*shop name/logo*/
-    font-size: 22pt;
-    font-weight: bolder;
+h1 {
+    /*shop name/logo*/
+    font-size     : 22pt;
+    font-weight   : bolder;
     text-transform: uppercase;
-    margin-left: 30px;
+    margin-left   : 30px;
 }
 
-h2 { /* options title */
-    color:#715E4A;
+h2 {
+    /* options title */
+    color    : #715E4A;
     font-size: 25px;
 }
 
-h3 { /* option items */
-    color: #715E4A;
-    font-size: 20px;
+h3 {
+    /* option items */
+    color      : #715E4A;
+    font-size  : 20px;
     font-weight: normal;
 }
 
-h4 { /* total price */
-    color: #715E4A;
-    font-size: 20px;
-    font-weight: bold;
+h4 {
+    /* total price */
+    color        : #715E4A;
+    font-size    : 20px;
+    font-weight  : bold;
     margin-bottom: 70px;
 }
 
-h5 { /* +, - for number of rolls */
-    color: #B88750;
+h5 {
+    /* +, - for number of rolls */
+    color      : #B88750;
     font-weight: bold;
-    font-size: 20px;
-    margin: 30px;
+    font-size  : 20px;
+    margin     : 30px;
 }
 
-h6 {  /* dropdown */
-    color: #715E4A;
-    font-size: 20px;
+h6 {
+    /* dropdown */
+    color      : #715E4A;
+    font-size  : 20px;
     font-weight: bold;
-    margin-top: 13px;
+    margin-top : 13px;
 }
 
 
-.cart span{
+.cart span {
     cursor: pointer;
-    color: black;
+    color : black;
 }
+
 .add-cart {
     cursor: pointer;
-    color: black;
+    color : black;
 
 }
