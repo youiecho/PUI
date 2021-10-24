@@ -196,6 +196,15 @@ hr { /* horizontal line to separate total price */
     margin-bottom: 30px;
 }
 
+#glazing {
+    border: none;
+    
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Encode Sans Condensed'
+
+}
+
 /* heading styles */
 h1 { /*shop name/logo*/
     font-size: 22pt;
@@ -237,3 +246,12 @@ h6 {  /* dropdown */
 }
 
 
+.cart span{
+    cursor: pointer;
+    color: black;
+}
+.add-cart {
+    cursor: pointer;
+    color: black;
+
+}

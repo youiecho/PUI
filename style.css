@@ -55,7 +55,7 @@ a { /*remove hyperlink style*/
 }
 
 .bestRolls { /*left column slideshow banner*/
-    background-image: url(mainimg.jpg);
+    background-image: url(images/mainimg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;

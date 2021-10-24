@@ -18,7 +18,12 @@
                 <!--user icon links to My Page-->
                 <div><a href="./my.html"><i class="fas fa-user"></i></a></div> 
                 <div><i class="fas fa-heart"></i></div>
-                <div><i class="fas fa-shopping-cart"></i></div>
+                <div>
+                    <a href="./cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartItemsNumber"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -40,29 +45,32 @@
 
     <div class="itemInfoContainer"> <!-- 3-column grid, first row of item info -->
         <div class="itemInfo"> <!-- wrapper for each item info -->
-            <img src="browsingimg.png" alt="original bun image"> <!-- item image and alt tag -->
-            <div> <!-- includes bries description and "Select" button -->
-                <p>This is a brief description of the bun that gives a quick overview.</p>
-                <button class="button">Select</button>
-            </div>
-        </div>
-        <div class="itemInfo">
-            <img src="browsingimg.png" alt="caramel pecan bun image">
-            <div>
+            <img src="images/browsingimg.png" alt="original bun image"> <!-- item image and alt tag -->
+            <div> 
                 <p>This is a brief description of the bun that gives a quick overview.</p>
                 <a href="./detail.html">
-                    <button class="button">Select</button>
+                <button class="button" id='Original' onclick="setBunType(this.id)">Select</button>
                 </a>
             </div>
         </div>
         <div class="itemInfo">
-            <img src="browsingimg.png" alt="walnut bun image">
+            <img src="images/browsingimg.png" alt="caramel pecan bun image">
             <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
-                <button class="button">Select</button>
+                <a href="./detail.html">
+                    <button class="button" id='Caramel Pecan' onclick="setBunType(this.id)">Select</button>
+                </a>
             </div>
         </div>
-        
+        <div class="itemInfo">
+            <img src="images/browsingimg.png" alt="walnut bun image">
+            <div>
+                <p>This is a brief description of the bun that gives a quick overview.</p>
+                <a href="./detail.html">
+                    <button class="button" id='Walnut' onclick="setBunType(this.id)">Select</button>
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="itemNameContainer"> <!-- 3-column grid, second row of item headers -->
@@ -79,27 +87,34 @@
 
     <div class="itemInfoContainer"> <!-- 3-column grid, first row of item info -->
         <div class="itemInfo"> <!-- wrapper for each item info -->
-            <img src="browsingimg.png" alt="original gluten-free bun image">
+            <img src="images/browsingimg.png" alt="original gluten-free bun image">
             <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
-                <button class="button">Select</button>
+                <a href="./detail.html">
+                    <button class="button" id='Original Gluten-Free' onclick="setBunType(this.id)">Select</button>
+                </a>
             </div>
         </div>
         <div class="itemInfo">
-            <img src="browsingimg.png" alt="blackberry bun image">
+            <img src="images/browsingimg.png" alt="blackberry bun image">
             <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
-                <button class="button">Select</button>
+                <a href="./detail.html">
+                    <button class="button" id='Blackberry' onclick="setBunType(this.id)">Select</button>
+                </a>
             </div>
         </div>
         <div class="itemInfo">
-            <img src="browsingimg.png" alt="pumpkin spice bun image">
+            <img src="images/browsingimg.png" alt="pumpkin spice bun image">
             <div>
                 <p>This is a brief description of the bun that gives a quick overview.</p>
-                <button class="button">Select</button>
+                <a href="./detail.html">
+                    <button class="button" id='Pumpkin Spice' onclick="setBunType(this.id)">Select</button>
+                </a>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
 
