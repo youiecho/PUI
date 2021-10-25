@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--links to stylesheet, typefaces, icons-->
+  <link href="detail_style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa243ee63d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA'Compatible" content="ie=edge" />
+  <title>Bun Bun Bake Shop</title>
+</head>
+
+<body>
+  <div class="header">
+    <!--whole header section-->
+    <a href="./index.html">
+      <h1>Bun Bun Bake Shop</h1>
+    </a>
+    <!--shop name/logo-->
+    <div class="wrapper">
+      <!--right side nav bar-->
+      <div class="nav">
+        <!--right side nav bar elements-->
+        <div>About Us</div>
+        <div>Help</div>
+        <div><i class="fas fa-search"></i></div>
+        <!--user icon links to My Page-->
+        <div>
+          <a href="./my.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div><i class="fas fa-heart"></i></div>
+        <div class="cart">
+          <a href="./cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartItemsNumber"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="maingrid">
+    <div class="leftColumn">
+      <!-- left column -->
+      <p class="caramelPecan">
+        <span id="bunType"></span>
+        <!-- caramel pecan header elements -->
+        <span class="caramelPecanDetails">
+          <span class="shop-item-price">$4.50</span> 700kcal
+          <!-- price and calories -->
+          <span class="likes"><i class="fas fa-heart"></i> 120</span>
+          <!-- heart icon and number of likes -->
+        </span>
+      </p>
+      <div class="descriptionContainer">
+        <!-- caramel pecan information -->
+        <div class="description">
+          <!-- description text -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </div>
+        <!-- buttons for further information -->
+        <button class="button">Reviews</button>
+        <button class="button">Nutritional info</button>
+      </div>
+      <img id='bunTypeImage' src="images/menuimg.png" alt="caramel pecan detail image" />
+      <!-- item image -->
+    </div>
+
+    <div class="optionsContainer">
+      <!-- right column for purchase options -->
+      <div class="options">
+        <h2>Options</h2>
+      </div>
+      <!-- column title -->
+      <div class="optionItems">
+        <!-- options for number of rolls, glazing -->
+        <h5>
+          <span id="minus" onclick="updateRollNumber(this.id)">-</span>
+          <span class="number" id="rollNumber">1</span>
+          <span id="plus" onclick="updateRollNumber(this.id)">+</span>
+        </h5>
+        <h3>rolls</h3>
+        <!-- <h6><button class="button2"><strong>no</strong>
+                    <i class="fas fa-caret-down"></i></button></h6> -->
+        <h6>
+          <button class="button2">
+            <select id="glazing" onclick="setGlazing(this)">
+              <option value="None">None</option>
+              <option value="Sugar-Milk">Sugar-Milk</option>
+              <option value="Vanilla-milk">Vanilla-Milk</option>
+              <option value="Double-Chocolate">Double-Chocolate</option>
+            </select>
+          </button>
+        </h6>
+        <h3>glazing</h3>
+      </div>
+      <hr />
+      <!-- horizontal line to separate total price -->
+      <div class="optionItems">
+        <!-- total cost and options for cart/checkout-->
+        <h4>Total</h4>
+        <h4>$4.50</h4>
+        <h3>
+          <button class="image button2">
+            <a class="add-cart cart1" onclick="updateCart()" href="#">Add to Cart</a>
+          </button>
+        </h3>
+        <h3><button class="button3">Checkout Now</button></h3>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
