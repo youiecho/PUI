@@ -8,20 +8,33 @@
 </head>
 
 <body>
-    <div class="header"> <!--whole header section-->
-        <a href="./index.html"><h1>Bun Bun Bake Shop</h1></a> <!--shop name/logo-->
-        <div class="wrapper"> <!--right side nav bar-->
-            <div class="nav"> <!--right side nav bar elements-->
-                <div>About Us</div>
-                <div>Help</div>
-                <div><i class="fas fa-search"></i></div>
-                <!--user icon links to My Page-->
-                <div><a href="./my.html"><i class="fas fa-user"></i></a></div> 
-                <div><i class="fas fa-heart"></i></div>
-                <div><i class="fas fa-shopping-cart"></i></div>
+    <div class="header">
+        <!--whole header section-->
+        <a href="./index.html">
+          <h1>Bun Bun Bake Shop</h1>
+        </a>
+        <!--shop name/logo-->
+        <div class="wrapper">
+          <!--right side nav bar-->
+          <div class="nav">
+            <!--right side nav bar elements-->
+            <div>About Us</div>
+            <div>Help</div>
+            <div><i class="fas fa-search"></i></div>
+            <!--user icon links to My Page-->
+            <div>
+              <a href="./my.html"><i class="fas fa-user"></i></a>
             </div>
+            <div><i class="fas fa-heart"></i></div>
+            <div class="cart">
+              <a href="./cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartItemsNumber"></span>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <div class="pageName"><h2>My Page</h2></div> <!--page name-->
 
@@ -48,6 +61,7 @@
             <div class="box"><p> </p></div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
 
