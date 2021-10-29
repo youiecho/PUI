@@ -49,7 +49,7 @@ a {
     /* right column for purchase options */
     /* border: 3px solid #b88750; */
     border-radius   : 10px;
-    height          : 615px;
+    /* height          : 615px; */
     width           : 1200px;
     margin          : auto;
     margin-top      : 60px;
@@ -63,20 +63,21 @@ a {
     height: 45px;
 }
 
-.mainGrid {
+.wholeContainer {
     display              : grid;
     grid-template-columns: 50% 50%;
-    margin               : 20px;
+    margin               : 50px;
     margin-top           : 0px;
 }
 
-.column {
+/* .column {
     margin: 50px;
-}
+} */
 
 .innerGrid {
     display              : grid;
     grid-template-columns: 35% 60%;
+    margin: 60px;
 }
 
 img {
@@ -153,10 +154,17 @@ h2 {
     margin-top : 45px;
 }
 
-h3 {
-    /* option items */
+#cartContainer.div {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     color      : #715E4A;
-    font-size  : 18px;
+    font-size  : 16px;
     font-weight: bold;
-    margin-top : 15px;
 }
+
+#cartContainer {
+    margin-bottom: 40px;
+    align-items: baseline;
+}
+
+
