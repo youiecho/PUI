@@ -5,7 +5,7 @@
 /**
  * Called when user click on select in browsing page.
  */
-function setBunType(newBunType) {
+ function setBunType(newBunType) {
   localStorage.setItem("bunType", JSON.stringify(newBunType));
 }
 
@@ -72,7 +72,7 @@ function updateCartNum(num) {
 }
 
 /**
- * Called when use clicks on add to cart
+ * Called when user clicks on add to cart
  */
 
 /**
@@ -227,7 +227,7 @@ function onLoadCart() {
 
   var cartElem = document.getElementById("cartContainer");
   if (cartElem !== null) {
-    displayCartProducts();//function to display cart products later, when I make cart interactive
+    displayCartProducts();
   }
 }
 // count how many odd even/table
@@ -246,24 +246,34 @@ function displayCartProducts() {
     var product_name = products[i]["bunType"];
     var product_quantity = products[i]["inCartNum"];
     var product_glazing = products[i]["glazingType"];
-    var linebreak = document.createElement('br');
-    var linebreak2 = document.createElement('br');
-    var linebreak3 = document.createElement('br');
-    var linebreak4 = document.createElement('br');
     var button = document.createElement("button");
     var button2 = document.createElement("button");
 
     name.innerHTML = product_name;
     quantity.innerHTML = product_quantity;
     glazing.innerHTML = product_glazing;
-
     button.innerHTML = "Edit";
     button2.innerHTML = "Delete";
-
     button.className = 'button1';
     button2.className = 'button2';
 
+    button2.addEventListener('click', function () {
+      console.log('hello');
+      var productBlock = this.parentNode.parentNode.parentNode.parentNode;
+      container.removeChild(productBlock);
+      var newProducts = []
+      for (let p = 0; p < products.length; p++) {
+        if (p != i) {
+          newProducts.push(products[p])
+        }
+      }
+      products = newProducts;
+      localStorage.setItem("cartProducts", JSON.stringify(products));
+      // updateCart();
+    })
+
     tbl = document.createElement('table');
+    tbl.cellPadding = '10';
       for (let i = 0; i < 2; i++) { //rows i
         const tr = tbl.insertRow();
         for (let j = 0; j < 2; j++) { //columns j
@@ -271,22 +281,21 @@ function displayCartProducts() {
           if (i === 1 && j === 1) {
             break;
           } else {
-            if (i === 0 && j === 0) {
+            if (i === 0 && j === 0) { // i 0 j 0
               container.setAttribute('rowSpan', '2');
               container.innerHTML += 
               `<img src="images/chocolate.JPG"> `
             } else if (i === 1 && j === 0) {
-              container.append(button,button2);
-            } else {
+              container.append(button, "  ", button2);
+            } else if (i === 0 && j === 1) {
               container.append(name,", ",glazing," glazing, ",quantity," roll(s) ");
             }
           }
-        }
-      }
+        } 
+      } 
       container.appendChild(tbl);
   }
 }
-
 
 
 
