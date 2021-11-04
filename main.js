@@ -230,6 +230,62 @@ function onLoadCart() {
     displayCartProducts();
   }
 }
+
+
+function makeCartItem(products, i) {
+  // var newDiv = document.createElement("div");
+  var name = document.createElement("span");
+  var glazing = document.createElement("span");
+  var quantity = document.createElement("span");
+  var product_name = products[i]["bunType"];
+  var product_quantity = products[i]["inCartNum"];
+  var product_glazing = products[i]["glazingType"];
+  var button = document.createElement("button");
+  var button2 = document.createElement("button");
+
+  name.innerHTML = product_name;
+  quantity.innerHTML = product_quantity;
+  glazing.innerHTML = product_glazing;
+  button.innerHTML = "Edit";
+  button2.innerHTML = "Delete";
+  button.className = 'button1';
+  button2.className = 'button2';
+
+  button2.addEventListener('click', function () {
+    console.log('hello');
+    var productBlock = this.parentNode.parentNode.parentNode.parentNode.parentNode;
+    productBlock.parentNode.removeChild(productBlock);
+
+    var newProducts = []
+    for (let p = 0; p < products.length; p++) {
+      if (p != i) {
+        newProducts.push(products[p])
+      }
+    }
+    products = newProducts;
+    localStorage.setItem("cartProducts", JSON.stringify(products));
+  })
+
+  tbl = document.createElement('table');
+  tbl.cellPadding = '10';
+    for (let i = 0; i < 2; i++) { //rows i
+      const tr = tbl.insertRow();
+      for (let j = 0; j < 4; j++) { //columns j
+        const container = tr.insertCell();
+          if (i === 0 && j === 0) { // i 0 j 0
+            container.setAttribute('rowSpan', '2');
+            container.innerHTML += 
+            `<img src="images/chocolate.JPG"> `
+          } else if (i === 0 && j === 1) {
+            container.append(name,", ",glazing," glazing, ",quantity," roll(s) ");
+          } else if (i === 1 && j === 0) {
+            container.append(button, "  ", button2);
+          }
+      }
+    } 
+    return tbl
+}
+
 // count how many odd even/table
 /**
  * Called when cart page is loaded.
@@ -238,65 +294,38 @@ function displayCartProducts() {
   var products = JSON.parse(localStorage.getItem("cartProducts"));
   var container = document.getElementById("cartContainer");
 
-  for (let i = 0; i < products.length; i++) {
-    // var newDiv = document.createElement("div");
-    var name = document.createElement("span");
-    var glazing = document.createElement("span");
-    var quantity = document.createElement("span");
-    var product_name = products[i]["bunType"];
-    var product_quantity = products[i]["inCartNum"];
-    var product_glazing = products[i]["glazingType"];
-    var button = document.createElement("button");
-    var button2 = document.createElement("button");
+  if (products.length % 2 == 0) {
+    var numRows = products.length / 2
+  } else {
+    var numRows = Math.floor(products.length / 2) + 1
+  }
+  
+  for (let r = 0; r < numRows; r++) {
+    var productLeft = 2 * r
+    var productRight = 2 * r + 1
+    if (productLeft >= 0 && productLeft < products.length) {
+      var leftItem = makeCartItem(products, productLeft)
+    }
+    if (productRight >= 0 && productRight < products.length) {
+      var rightItem = makeCartItem(products, productRight)
+    } else {
+      var rightItem = document.createElement("span")
+      rightItem.innerText = ""
+    }
 
-    name.innerHTML = product_name;
-    quantity.innerHTML = product_quantity;
-    glazing.innerHTML = product_glazing;
-    button.innerHTML = "Edit";
-    button2.innerHTML = "Delete";
-    button.className = 'button1';
-    button2.className = 'button2';
-
-    button2.addEventListener('click', function () {
-      console.log('hello');
-      var productBlock = this.parentNode.parentNode.parentNode.parentNode;
-      container.removeChild(productBlock);
-      var newProducts = []
-      for (let p = 0; p < products.length; p++) {
-        if (p != i) {
-          newProducts.push(products[p])
-        }
-      }
-      products = newProducts;
-      localStorage.setItem("cartProducts", JSON.stringify(products));
-      // updateCart();
-    })
-
-    tbl = document.createElement('table');
-    tbl.cellPadding = '10';
-      for (let i = 0; i < 2; i++) { //rows i
-        const tr = tbl.insertRow();
-        for (let j = 0; j < 2; j++) { //columns j
-          const container = tr.insertCell();
-          if (i === 1 && j === 1) {
-            break;
-          } else {
-            if (i === 0 && j === 0) { // i 0 j 0
-              container.setAttribute('rowSpan', '2');
-              container.innerHTML += 
-              `<img src="images/chocolate.JPG"> `
-            } else if (i === 1 && j === 0) {
-              container.append(button, "  ", button2);
-            } else if (i === 0 && j === 1) {
-              container.append(name,", ",glazing," glazing, ",quantity," roll(s) ");
-            }
-          }
-        } 
-      } 
-      container.appendChild(tbl);
+    // container += leftItem + " " + rightItem
+    var rowTable = document.createElement("table")
+    var rowTableRow = document.createElement("tr")
+    var rowTableRowCellLeft = document.createElement("td");
+    rowTableRowCellLeft.appendChild(leftItem);
+    var rowTableRowCellRight = document.createElement("td");
+    rowTableRowCellRight.appendChild(rightItem);
+    rowTableRow.appendChild(rowTableRowCellLeft);
+    rowTableRow.appendChild(rowTableRowCellRight);
+    // rowTable.appendChild(rowTableRow)
+    container.appendChild(rowTableRow)
   }
 }
-
 
 
 
