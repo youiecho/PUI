@@ -98,13 +98,11 @@ function updateCart() {
   let cartItems = localStorage.getItem("cartProducts");
   cartItems = JSON.parse(cartItems);
 
-  console.log(curBun, curGlaze);
   if (cartItems !== null) {
     // cart is not empty, so we want to check if there is a match for the bun and
     // glazing combination
     let found = false; // we need to know if we found it in the cart or not
     for (var i = 0; i < cartItems.length; i++) {
-      console.log(cartItems[i]);
       if (
         cartItems[i]["bunType"] === curBun &&
         cartItems[i]["glazingType"] === curGlaze
@@ -153,7 +151,6 @@ function onLoadBunType() {
 
   // have not been initialized in storage
   if (!bunType) {
-    console.log("Initialize bunType");
     localStorage.setItem("bunType", JSON.stringify("None"));
   }
 
@@ -233,7 +230,6 @@ function onLoadCart() {
 
 
 function makeCartItem(products, i) {
-  // var newDiv = document.createElement("div");
   var name = document.createElement("span");
   var glazing = document.createElement("span");
   var quantity = document.createElement("span");
@@ -246,13 +242,16 @@ function makeCartItem(products, i) {
   name.innerHTML = product_name;
   quantity.innerHTML = product_quantity;
   glazing.innerHTML = product_glazing;
-  button.innerHTML = "Edit";
+  button.innerHTML = "<span>Edit</span>";
   button2.innerHTML = "Delete";
   button.className = 'button1';
   button2.className = 'button2';
 
+  button.addEventListener("click", function() {
+    document.location.href = 'detail.html';
+})
+
   button2.addEventListener('click', function () {
-    console.log('hello');
     var productBlock = this.parentNode.parentNode.parentNode.parentNode.parentNode;
     productBlock.parentNode.removeChild(productBlock);
 
@@ -270,7 +269,7 @@ function makeCartItem(products, i) {
   tbl.cellPadding = '10';
     for (let i = 0; i < 2; i++) { //rows i
       const tr = tbl.insertRow();
-      for (let j = 0; j < 4; j++) { //columns j
+      for (let j = 0; j < 2; j++) { //columns j
         const container = tr.insertCell();
           if (i === 0 && j === 0) { // i 0 j 0
             container.setAttribute('rowSpan', '2');
@@ -313,17 +312,15 @@ function displayCartProducts() {
       rightItem.innerText = ""
     }
 
-    // container += leftItem + " " + rightItem
-    var rowTable = document.createElement("table")
-    var rowTableRow = document.createElement("tr")
+    var rowTable = document.createElement("table");
+    var rowTableRow = document.createElement("tr");
     var rowTableRowCellLeft = document.createElement("td");
     rowTableRowCellLeft.appendChild(leftItem);
     var rowTableRowCellRight = document.createElement("td");
     rowTableRowCellRight.appendChild(rightItem);
     rowTableRow.appendChild(rowTableRowCellLeft);
     rowTableRow.appendChild(rowTableRowCellRight);
-    // rowTable.appendChild(rowTableRow)
-    container.appendChild(rowTableRow)
+    container.appendChild(rowTableRow);
   }
 }
 
