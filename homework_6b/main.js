@@ -347,17 +347,14 @@ function displayCartProducts() {
 
     var rowTableRow = document.createElement("tr");
     var rowTableRowCellLeft = document.createElement("td");
-    rowTableRowCellLeft.appendChild(leftItem);
     var rowTableRowCellRight = document.createElement("td");
+    rowTableRowCellLeft.appendChild(leftItem);
     rowTableRowCellRight.appendChild(rightItem);
     rowTableRow.appendChild(rowTableRowCellLeft);
     rowTableRow.appendChild(rowTableRowCellRight);
     container.appendChild(rowTableRow);
   }
 }
-
-
-
 
 /************************************
 /* load (initialize if not initialized yet) localStorage data
